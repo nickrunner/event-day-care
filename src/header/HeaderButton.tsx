@@ -1,6 +1,7 @@
 import { Box, Button } from "theme-ui";
 import React, { ReactElement, useState, PropsWithChildren } from "react";
 import { ArrowDropDown } from "@mui/icons-material";
+import { navigate } from "gatsby"; //import navigate from gatsby
 
 export interface HeaderButtonMenuItem {
   icon: ReactElement;
@@ -30,7 +31,7 @@ export default function HeaderButton(
     } else if (props.onClick) {
       props.onClick();
     } else if (props.href) {
-      //navigate(props.href);
+      navigate(props.href);
     }
   }
   function handleClose() {
